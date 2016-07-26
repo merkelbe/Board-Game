@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>cityHex.png</Source>
+      <Name>cityHex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\cityHex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1611044-05:00</Time>
+    </Item>
+    <Item>
+      <Source>deepWaterHex.png</Source>
+      <Name>deepWaterHex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\deepWaterHex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1611044-05:00</Time>
+    </Item>
+    <Item>
+      <Source>desert.png</Source>
+      <Name>desert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\desert.xnb</Output>
+      <Time>2016-07-16T14:14:34.1611044-05:00</Time>
+    </Item>
+    <Item>
+      <Source>desertHex.png</Source>
+      <Name>desertHex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\desertHex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1621045-05:00</Time>
+    </Item>
+    <Item>
+      <Source>GameThumbnail.png</Source>
+      <Name>GameThumbnail</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\GameThumbnail.xnb</Output>
+      <Time>2016-07-16T14:14:34.1601044-05:00</Time>
+    </Item>
+    <Item>
+      <Source>grassHex.png</Source>
+      <Name>grassHex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\grassHex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1621045-05:00</Time>
+    </Item>
+    <Item>
+      <Source>hovercraft.png</Source>
+      <Name>hovercraft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\hovercraft.xnb</Output>
+      <Time>2016-07-16T14:14:34.1621045-05:00</Time>
+    </Item>
+    <Item>
+      <Source>ice.png</Source>
+      <Name>ice</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\ice.xnb</Output>
+      <Time>2016-07-16T14:14:34.1621045-05:00</Time>
+    </Item>
+    <Item>
+      <Source>jungle.png</Source>
+      <Name>jungle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\jungle.xnb</Output>
+      <Time>2016-07-16T14:14:34.1631045-05:00</Time>
+    </Item>
+    <Item>
+      <Source>mine.png</Source>
+      <Name>mine</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\mine.xnb</Output>
+      <Time>2016-07-16T14:14:34.1631045-05:00</Time>
+    </Item>
+    <Item>
+      <Source>mountainHex.png</Source>
+      <Name>mountainHex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\mountainHex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1631045-05:00</Time>
+    </Item>
+    <Item>
+      <Source>rubberchicken.png</Source>
+      <Name>rubberchicken</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\rubberchicken.xnb</Output>
+      <Time>2016-07-16T14:14:34.1661047-05:00</Time>
+    </Item>
+    <Item>
+      <Source>selectedHex.png</Source>
+      <Name>selectedHex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\selectedHex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1661047-05:00</Time>
+    </Item>
+    <Item>
+      <Source>swamp.png</Source>
+      <Name>swamp</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\swamp.xnb</Output>
+      <Time>2016-07-16T14:14:34.1661047-05:00</Time>
+    </Item>
+    <Item>
+      <Source>tank.png</Source>
+      <Name>tank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\tank.xnb</Output>
+      <Time>2016-07-16T14:14:34.1661047-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Template Hex.png</Source>
+      <Name>Template Hex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\Template Hex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1611044-05:00</Time>
+    </Item>
+    <Item>
+      <Source>waterHex.png</Source>
+      <Name>waterHex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\waterHex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1671048-05:00</Time>
+    </Item>
+    <Item>
+      <Source>woodHex.png</Source>
+      <Name>woodHex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\woodHex.xnb</Output>
+      <Time>2016-07-16T14:14:34.1671048-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Arial.spritefont</Source>
+      <Name>Arial</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\Arial.xnb</Output>
+      <Time>2016-07-16T14:38:50.7074141-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{72353514-A8C6-4C0F-84A6-3DEC11206756}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_GameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_Game\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-07-16T14:24:37.1345925-05:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
