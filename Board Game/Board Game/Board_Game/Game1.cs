@@ -39,7 +39,7 @@ namespace BoardGame
         Sprite selectedHexSprite;
 
         GameBoard gameBoard;
-        List<ClickInfo> actionQueue;
+        List<ClickInfo> currentClickInputs;
 
         public Game1()
         {
@@ -51,7 +51,7 @@ namespace BoardGame
             graphics.PreferredBackBufferHeight = WINDOW_HEIGHT;
 
             gameBoard = new GameBoard(GameBoard.BoardSpaceOffsetType.ToggleWithUpStart, 50,26, 418, 362);
-            actionQueue = new List<ClickInfo>();
+            currentClickInputs = new List<ClickInfo>();
 
             keyFilter = new KeyFilter();
             mouseFilter = new MouseFilter();
@@ -133,11 +133,11 @@ namespace BoardGame
             #endregion
             
             mouseState = Mouse.GetState();
-            mouseFilter.Update(mouseState, ref actionQueue);
-            if(actionQueue.Count > 0)
+            mouseFilter.Update(mouseState, ref currentClickInputs);
+            if(currentClickInputs.Count > 0)
             {
-                gameBoard.HandleClick(actionQueue[0]);
-                actionQueue.RemoveAt(0);
+                gameBoard.HandleClickInputs(currentClickInputs);
+                currentClickInputs.RemoveAt(0);
             }
 
             keyboardState = Keyboard.GetState();

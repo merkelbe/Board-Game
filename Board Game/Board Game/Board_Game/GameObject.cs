@@ -17,8 +17,8 @@ namespace BoardGame
         protected int WINDOW_WIDTH;
         protected int WINDOW_HEIGHT;
 
-        protected int REFRESH_RATE = 16;
-        protected int ELAPSED_TIME = 0;
+        protected const int REFRESH_RATE = 16;
+        protected const int ELAPSED_TIME = 0;
         
         protected Sprite sprite;
         protected Rectangle destinationRectangle;
@@ -36,6 +36,14 @@ namespace BoardGame
         #endregion
 
         #region Constructors
+
+        internal GameObject(int _x, int _y, Sprite _sprite, int _windowWidth, int _windowHeight)
+        {
+            WINDOW_WIDTH = _windowWidth;
+            WINDOW_HEIGHT = _windowHeight;
+            sprite = _sprite;
+            destinationRectangle = new Rectangle(_x, _y, _sprite.Width, _sprite.Height);
+        }
 
         #endregion
 

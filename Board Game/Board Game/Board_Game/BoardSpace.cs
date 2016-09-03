@@ -15,24 +15,33 @@ namespace BoardGame
         internal int RowIndex;
         internal int ColIndex;
 
-        internal Tuple<int, int> Center
+        internal Point Center
         {
-            get { return new Tuple<int, int>((destinationRectangle.X + destinationRectangle.Width / 2), (destinationRectangle.Y + destinationRectangle.Height / 2)); }
+            get { return new Point((destinationRectangle.X + destinationRectangle.Width / 2), (destinationRectangle.Y + destinationRectangle.Height / 2)); }
         }
 
-        internal BoardSpace(int _x, int _y, Sprite _hexSprite,Sprite _selectedSprite, int _windowWidth, int _windowHeight, int _colIndex, int _rowIndex)
+        //internal BoardSpace(int _x, int _y, Sprite _hexSprite,Sprite _selectedSprite, int _windowWidth, int _windowHeight, int _colIndex, int _rowIndex)
+        //{
+        //    this.active = true;
+        //    this.Selected = false;
+        //    this.X = _x;
+        //    this.Y = _y;
+        //    this.sprite = _hexSprite;
+        //    this.selectedSprite = _selectedSprite;
+        //    this.RowIndex = _rowIndex;
+        //    this.ColIndex = _colIndex;
+        //    this.WINDOW_WIDTH = _windowWidth;
+        //    this.WINDOW_HEIGHT = _windowHeight;
+        //    this.destinationRectangle = new Rectangle(this.X, this.Y, this.sprite.Width, this.sprite.Height);
+        //}
+
+        public BoardSpace(int _x, int _y, Sprite _hexSprite, Sprite _selectedSprite, int _windowWidth, int _windowHeight, int _colIndex, int _rowIndex) : base(_x, _y, _hexSprite,_windowWidth,_windowHeight)
         {
             this.active = true;
             this.Selected = false;
-            this.X = _x;
-            this.Y = _y;
-            this.sprite = _hexSprite;
             this.selectedSprite = _selectedSprite;
             this.RowIndex = _rowIndex;
             this.ColIndex = _colIndex;
-            this.WINDOW_WIDTH = _windowWidth;
-            this.WINDOW_HEIGHT = _windowHeight;
-            this.destinationRectangle = new Rectangle(this.X, this.Y, this.sprite.Width, this.sprite.Height);
         }
 
         internal void Draw(SpriteBatch _spriteBatch)

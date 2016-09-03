@@ -1,1 +1,2 @@
 C:\Users\Bluth\Desktop\Board-Game\Board Game\Board Game\Board_GameContent\obj\x86\Debug\Board_GameContent.contentprojResolveAssemblyReference.cache
+C:\Users\Bluth\Desktop\Board-Game Backup since I suck at Version Control\Board-Game\Board Game\Board Game\Board_GameContent\obj\x86\Debug\Board_GameContent.contentprojResolveAssemblyReference.cache

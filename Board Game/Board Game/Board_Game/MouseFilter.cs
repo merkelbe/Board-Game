@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 namespace BoardGame
@@ -12,39 +12,6 @@ namespace BoardGame
         //Mouse Filter class adds to queue when it registers mouse commands.  Inputs are accessed and removed by parent game class.
         internal List<ClickInfo> ActionQueue;
 
-        //internal bool LeftDoubleClick
-        //{
-        //    get { return LeftButtonInfo.DoubleClick; }
-        //}
-        //internal bool LeftSingleClick
-        //{
-        //    get { return LeftButtonInfo.SingleClick; }
-        //}
-        //internal bool RightDoubleClick
-        //{
-        //    get { return RightButtonInfo.DoubleClick; }
-        //}
-        //internal bool RightSingleClick
-        //{
-        //    get { return RightButtonInfo.SingleClick; }
-        //}
-        //internal Tuple<int, int> LeftStartingCoords
-        //{
-        //    get { return LeftButtonInfo.StartingCoordinates; }
-        //}
-        //internal Tuple<int, int> LeftEndingCoordinates
-        //{
-        //    get { return LeftButtonInfo.EndingCoordinates; }
-        //}
-        //internal Tuple<int, int> RightStartingCoords
-        //{
-        //    get { return RightButtonInfo.StartingCoordinates; }
-        //}
-        //internal Tuple<int, int> RightEndingCoords
-        //{
-        //    get { return RightButtonInfo.EndingCoordinates; }
-        //}
-        //TODO make this shit private yo!
         LeftClickInfo leftButtonInfo;
         RightClickInfo rightButtonInfo;
 
@@ -67,32 +34,36 @@ namespace BoardGame
         g.InputType inputTypeSingle;
         g.InputType inputTypeDouble;
         bool lastUpdateIsDown;
+        bool currentIsDown;
         int stateChangeCount;
-        //internal bool DoubleClick;
-        //internal bool SingleClick;
-        Tuple<int, int> startingCoordinates;
-        Tuple<int, int> endingCoordinates;
+
+        Point startingCoordinates;
+        Point endingCoordinates;
+
         const int resetTimerInTicks = 10;
         private int currentTimer;
+
 
         internal ButtonInfo(g.InputType _inputTypeSingle, g.InputType _inputTypeDouble)
         {
             inputTypeSingle = _inputTypeSingle;
             inputTypeDouble = _inputTypeDouble;
+            startingCoordinates = new Point();
+            endingCoordinates = new Point();
         }
 
         internal abstract bool isButtonDown(MouseState _mouseState);
 
         internal void Update(MouseState _mouseState, ref List<ClickInfo> _actionQueue)
         {
-            bool currentIsDown = isButtonDown(_mouseState);
+            currentIsDown = isButtonDown(_mouseState);
 
             //Start of tracking condition
             if (currentIsDown && !lastUpdateIsDown && stateChangeCount == 0)
             {
                 stateChangeCount = 1;
                 currentTimer = resetTimerInTicks;
-                startingCoordinates = new Tuple<int, int>(_mouseState.X, _mouseState.Y);
+                startingCoordinates = new Point(_mouseState.X, _mouseState.Y);
             }
             //Tracks changes in up/down states
             else if (currentIsDown != lastUpdateIsDown)
@@ -102,7 +73,7 @@ namespace BoardGame
                 //Ending coords of single click
                 if (stateChangeCount == 2)
                 {
-                    endingCoordinates = new Tuple<int, int>(_mouseState.X, _mouseState.Y);
+                    endingCoordinates = new Point(_mouseState.X, _mouseState.Y);
                 }
             }
             lastUpdateIsDown = currentIsDown;
@@ -113,7 +84,7 @@ namespace BoardGame
                 if (stateChangeCount >= 4)
                 {
                     //Ending coords of double click. Overrides single click ending coords.
-                    endingCoordinates = new Tuple<int, int>(_mouseState.X, _mouseState.Y);
+                    endingCoordinates = new Point(_mouseState.X, _mouseState.Y);
 
                     _actionQueue.Add(new ClickInfo(inputTypeDouble, startingCoordinates, endingCoordinates));
                 }
@@ -154,10 +125,10 @@ namespace BoardGame
     class ClickInfo
     {
         internal g.InputType ClickType;
-        internal Tuple<int, int> StartingCoordinates;
-        internal Tuple<int, int> EndingCoordinates;
+        internal Point StartingCoordinates;
+        internal Point EndingCoordinates;
 
-        internal ClickInfo(g.InputType _clickType, Tuple<int,int> _startingCoordinates, Tuple<int,int> _endingCoordinates)
+        internal ClickInfo(g.InputType _clickType, Point _startingCoordinates, Point _endingCoordinates)
         {
             ClickType = _clickType;
             StartingCoordinates = _startingCoordinates;

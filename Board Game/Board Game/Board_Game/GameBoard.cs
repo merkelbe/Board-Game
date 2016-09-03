@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -320,41 +320,44 @@ namespace BoardGame
         }
 
         //Calculates the distance between any 
-        private double getDistanceBetweenPoints(Tuple<int, int> _point1, Tuple<int, int> _point2)
+        private double getDistanceBetweenPoints(Point _point1, Point _point2)
         {
-            return Math.Sqrt(Math.Pow(_point1.Item1 - _point2.Item1, 2) + Math.Pow(_point1.Item2 - _point2.Item2, 2));
+            return Math.Sqrt(Math.Pow(_point1.X - _point2.X, 2) + Math.Pow(_point1.Y - _point2.Y, 2));
         }
 
         #endregion
 
         #region Internal Methods
 
-        internal void HandleClick(ClickInfo _clickInfo)
+        internal void HandleClickInputs(List<ClickInfo> _allClickInfo)
         {
-            switch (_clickInfo.ClickType)
+            foreach (ClickInfo clickInfo in _allClickInfo)
             {
-                case g.InputType.LeftClick:
-                    {
-                        BoardSpace nearestBoardSpace = this.getClosestBoardSpace(_clickInfo.EndingCoordinates);
-                        if (nearestBoardSpace.CollisionRectangle.Contains(_clickInfo.EndingCoordinates.Item1, _clickInfo.EndingCoordinates.Item2))
+                switch (clickInfo.ClickType)
+                {
+                    case g.InputType.LeftClick:
                         {
-                            this.moveSelectedSpace(nearestBoardSpace.RowIndex, nearestBoardSpace.ColIndex);
+                            BoardSpace nearestBoardSpace = this.getClosestBoardSpace(clickInfo.EndingCoordinates);
+                            if (nearestBoardSpace.CollisionRectangle.Contains(clickInfo.EndingCoordinates.X, clickInfo.EndingCoordinates.Y))
+                            {
+                                this.moveSelectedSpace(nearestBoardSpace.RowIndex, nearestBoardSpace.ColIndex);
+                            }
+                            break;
                         }
-                        break;
-                    }
-                case g.InputType.LeftDoubleClick:
-                    {
-                        BoardSpace nearestBoardSpace = this.getClosestBoardSpace(_clickInfo.EndingCoordinates);
-                        if (nearestBoardSpace.CollisionRectangle.Contains(_clickInfo.EndingCoordinates.Item1, _clickInfo.EndingCoordinates.Item2))
+                    case g.InputType.LeftDoubleClick:
                         {
-                            this.selectConnectedSpaces(nearestBoardSpace);
+                            BoardSpace nearestBoardSpace = this.getClosestBoardSpace(clickInfo.EndingCoordinates);
+                            if (nearestBoardSpace.CollisionRectangle.Contains(clickInfo.EndingCoordinates.X, clickInfo.EndingCoordinates.Y))
+                            {
+                                this.selectConnectedSpaces(nearestBoardSpace);
+                            }
+                            break;
                         }
-                        break;
-                    }
-                default:
-                    {
-                        throw new Exception("Unknown click type: " + _clickInfo.ClickType);
-                    }
+                    default:
+                        {
+                            throw new Exception("Unknown click type: " + clickInfo.ClickType);
+                        }
+                }
             }
         }
 
@@ -464,7 +467,7 @@ namespace BoardGame
         }
 
         //Returns the closest space to a set of coordinates.  Can be used to figure out if a space has been clicked on.
-        private BoardSpace getClosestBoardSpace(Tuple<int, int> _coordinate)
+        private BoardSpace getClosestBoardSpace(Point _coordinate)
         {
             double currentClosestDistance = double.MaxValue;
             BoardSpace currentClosestSpace = null;
@@ -487,7 +490,7 @@ namespace BoardGame
             return currentClosestSpace;
         }
 
-        private BoardSpace getClosestBoardSpace(Tuple<int, int> _coordinate, out bool _coordinateContainedInSpace)
+        private BoardSpace getClosestBoardSpace(Point _coordinate, out bool _coordinateContainedInSpace)
         {
             double currentClosestDistance = double.MaxValue;
             BoardSpace currentClosestSpace = null;
@@ -504,7 +507,7 @@ namespace BoardGame
                         {
                             currentClosestDistance = dist;
                             currentClosestSpace = gameBoard[row, col];
-                            _coordinateContainedInSpace = currentClosestSpace.CollisionRectangle.Contains(_coordinate.Item1, _coordinate.Item2);
+                            _coordinateContainedInSpace = currentClosestSpace.CollisionRectangle.Contains(_coordinate.X, _coordinate.Y);
                         }
                     }
                 }
